@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>The completeness audit — what was checked, what wasn't</title>
+<meta name="theme-color" content="#0F1430">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230F1430'/%3E%3Ccircle cx='32' cy='32' r='21' fill='none' stroke='%23C9A227' stroke-width='2.5'/%3E%3Cpath d='M32 11 A21 21 0 0 1 46.8 17.2 L38.4 25.6 A9 9 0 0 0 32 23 Z' fill='%23E8913A'/%3E%3Ccircle cx='32' cy='32' r='3.5' fill='%23F3ECDD'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600;800&family=Karla:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lapis:#0F1430; --lapis-2:#161C43; --brass:#C9A227; --marigold:#E8913A;
+  --madder:#D4726A; --verdigris:#57A594;
+  --bone:#F3ECDD; --bone-2:#BDB69F; --bone-3:#918D75;
+  --rule:rgba(201,162,39,.22);
+  --display:'Eczar',Georgia,serif; --body:'Karla',system-ui,sans-serif; --mono:'IBM Plex Mono',monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--lapis);color:var(--bone);font-family:var(--body);
+  font-size:17px;line-height:1.62;overflow-x:hidden;
+  background-image:radial-gradient(ellipse 900px 600px at 78% -8%,rgba(201,162,39,.09),transparent 62%),
+                   radial-gradient(ellipse 700px 500px at 4% 42%,rgba(87,165,148,.05),transparent 60%);}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.08;margin:0;letter-spacing:-.012em}
+p{margin:0 0 1em}
+a{color:var(--marigold)}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--brass);display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.eyebrow::after{content:"";flex:1;height:1px;background:var(--rule)}
+.back{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--bone-3);
+  display:inline-block;padding:34px 0 0;text-decoration:none}
+.back:hover{color:var(--marigold)}
+.hero{padding:30px 0 0}
+.hero h1{font-size:clamp(38px,5.2vw,62px);max-width:15ch}
+.hero h1 em{font-style:normal;color:var(--madder)}
+.hero-sub{font-size:19px;color:var(--bone-2);max-width:64ch;margin-top:22px}
+.hero-sub strong{color:var(--bone);font-weight:500}
+section{padding:70px 0 0}
+.sec-h{font-size:clamp(25px,3.2vw,34px);margin-bottom:14px}
+.sec-lead{color:var(--bone-2);max-width:64ch;margin-bottom:32px}
+
+/* the ledger — the signature element */
+.ledger{border:1px solid var(--rule)}
+.lgroup{border-bottom:1px solid var(--rule)}
+.lgroup:last-child{border-bottom:0}
+.lghead{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--brass);padding:15px 22px;background:rgba(0,0,0,.22);border-bottom:1px solid var(--rule)}
+.lrow{display:grid;grid-template-columns:24px 1fr 300px;gap:16px;padding:13px 22px;
+  border-bottom:1px solid rgba(201,162,39,.09);align-items:baseline}
+.lrow:last-child{border-bottom:0}
+.lmark{font-family:var(--mono);font-size:14px;font-weight:600;line-height:1.3}
+.lrow.done .lmark{color:var(--verdigris)}
+.lrow.gap  .lmark{color:var(--madder)}
+.lname{font-size:15.5px;color:var(--bone)}
+.lname small{display:block;color:var(--bone-3);font-size:13px;line-height:1.45;margin-top:2px}
+.lres{font-family:var(--mono);font-size:12.5px;color:var(--bone-2);line-height:1.5}
+.lrow.done .lres{color:var(--verdigris)}
+.lrow.gap  .lres{color:var(--madder)}
+
+/* clean bill */
+.bill{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1px;
+  background:var(--rule);border:1px solid var(--rule)}
+.bcell{background:var(--lapis);padding:20px 22px}
+.bcell .bq{font-family:var(--display);font-size:19px;font-weight:600}
+.bcell .ba{font-family:var(--mono);font-size:12px;color:var(--verdigris);letter-spacing:.1em;
+  text-transform:uppercase;margin:7px 0 6px}
+.bcell .bn{font-size:13px;color:var(--bone-3);line-height:1.5}
+
+/* cross-check table */
+.tscroll{overflow-x:auto;border:1px solid var(--rule)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:14px}
+th,td{text-align:left;padding:11px 16px;border-bottom:1px solid rgba(201,162,39,.11)}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--brass);font-weight:500;background:rgba(0,0,0,.2)}
+td{color:var(--bone-2)} td.n{font-family:var(--display);font-size:17px;color:var(--bone);font-weight:600}
+td.m{font-family:var(--mono);font-size:13px}
+td.yes{color:var(--verdigris)} td.no{color:var(--bone-3)}
+tr.star td{background:rgba(201,162,39,.07)}
+tbody tr:hover{background:rgba(201,162,39,.05)}
+
+.callout{border:1px solid var(--brass);background:rgba(201,162,39,.06);padding:26px 30px;margin-top:32px}
+.callout h3{font-size:22px;margin-bottom:9px}
+.callout p{margin:0;color:var(--bone-2);font-size:16px}
+.callout strong{color:var(--bone);font-weight:500}
+.panel{border:1px solid var(--rule);background:var(--lapis-2);padding:28px 30px}
+.panel h4{font-family:var(--mono);font-size:10.5px;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--brass);margin:0 0 11px;font-weight:500}
+.panel p{margin:0 0 13px;color:var(--bone-2);font-size:15.5px}
+.panel p:last-child{margin-bottom:0}
+.panel strong{color:var(--bone);font-weight:500}
+footer{margin-top:88px;padding:30px 0 60px;border-top:1px solid var(--rule);
+  font-family:var(--mono);font-size:11.5px;color:var(--bone-3);letter-spacing:.06em;
+  display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+@media(max-width:820px){ .lrow{grid-template-columns:22px 1fr;gap:12px} .lres{grid-column:2;margin-top:5px} }
+@media(max-width:620px){ body{font-size:16px} .wrap{padding:0 18px} section{padding-top:52px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="../">&larr; Back to the shortlist</a>
+
+<header class="hero">
+  <div class="eyebrow">Part three · completeness audit</div>
+  <h1>No. Here is exactly what I <em>had not</em> checked.</h1>
+  <p class="hero-sub">You asked whether I had taken every reading, every calculation, every planet and every if-and-but into account. The honest answer was no. So I went back and computed the layers I had skipped. <strong>Everything below in red was missing from the first two pages.</strong> The good news is that none of it changes the answer &mdash; and two of the checks make it stronger.</p>
+</header>
+
+<section>
+  <div class="eyebrow">The ledger</div>
+  <h2 class="sec-h">What was covered, what was not</h2>
+  <p class="sec-lead">Green was already in the work. Red was missing and is now computed. The bottom group is still outstanding, and I say why each one does or does not matter.</p>
+  <div class="ledger"><div class="lgroup"><div class="lghead">Astrology — was already done</div><div class="lrow done"><div class="lmark">✓</div><div class="lname">Moon's sidereal longitude, nakshatra and pada</div><div class="lres">the naming letter, ढा</div></div><div class="lrow done"><div class="lmark">✓</div><div class="lname">Ayanamsa sensitivity across 7 systems</div><div class="lres">6 of 7 agree</div></div><div class="lrow done"><div class="lmark">✓</div><div class="lname">The clock window the pada was open</div><div class="lres">06:32 – 13:11 IST</div></div><div class="lrow done"><div class="lmark">✓</div><div class="lname">Rashi (D1) positions of all nine grahas</div><div class="lres">computed</div></div><div class="lrow done"><div class="lmark">✓</div><div class="lname">Lagna and lagna lord</div><div class="lres">Virgo; Mercury in own sign</div></div><div class="lrow done"><div class="lmark">✓</div><div class="lname">Jupiter's exaltation and combustion</div><div class="lres">exalted, 0.97° from Sun</div></div><div class="lrow done"><div class="lmark">✓</div><div class="lname">Vimshottari mahadasha sequence and balance</div><div class="lres">Venus, 2y 2m 15d left</div></div><div class="lrow done"><div class="lmark">✓</div><div class="lname">Tithi, weekday, nitya yoga</div><div class="lres">Shukla Chaturdashi, Tue</div></div><div class="lrow done"><div class="lmark">✓</div><div class="lname">Namkaran muhurat screening</div><div class="lres">both usual days ruled out</div></div></div><div class="lgroup"><div class="lghead">Astrology — was MISSING, now computed</div><div class="lrow gap"><div class="lmark">✗</div><div class="lname">Navamsa (D9) chart</div><div class="lres">computed — cannot change the letter</div></div><div class="lrow gap"><div class="lmark">✗</div><div class="lname">Gandanta check on Moon and lagna</div><div class="lres">clear</div></div><div class="lrow gap"><div class="lmark">✗</div><div class="lname">Kaal Sarp yoga</div><div class="lres">absent</div></div><div class="lrow gap"><div class="lmark">✗</div><div class="lname">Mangal dosha from lagna, Moon and Venus</div><div class="lres">clear on all three</div></div><div class="lrow gap"><div class="lmark">✗</div><div class="lname">Sade Sati status</div><div class="lres">not running</div></div><div class="lrow gap"><div class="lmark">✗</div><div class="lname">Moon's brightness (paksha strength)</div><div class="lres">164° from Sun — strong</div></div><div class="lrow gap"><div class="lmark">✗</div><div class="lname">Purva Ashadha's own attributes</div><div class="lres">deity Apah, gana Manushya</div></div></div><div class="lgroup"><div class="lghead">Numerology — was already done</div><div class="lrow done"><div class="lmark">✓</div><div class="lname">Moolank and Bhagyank</div><div class="lres">1 Sun · 9 Mars</div></div><div class="lrow done"><div class="lmark">✓</div><div class="lname">Chaldean values for every candidate</div><div class="lres">computed, not quoted</div></div><div class="lrow done"><div class="lmark">✓</div><div class="lname">Cheiro compound verdicts 10–52</div><div class="lres">read from two scans</div></div><div class="lrow done"><div class="lmark">✓</div><div class="lname">Planetary friendship from a classical text</div><div class="lres">Sāravalī 4.28–29</div></div><div class="lrow done"><div class="lmark">✓</div><div class="lname">First-name gate and full-name gate</div><div class="lres">both pages</div></div></div><div class="lgroup"><div class="lghead">Numerology — was MISSING, now computed</div><div class="lrow gap"><div class="lmark">✗</div><div class="lname">Pythagorean cross-check of the finalists</div><div class="lres">3 agree; only Dhyann on a passing root</div></div><div class="lrow gap"><div class="lmark">✗</div><div class="lname">Lo Shu gaps — digits the birth date omits</div><div class="lres">1, 3, 4, 5, 9</div></div></div><div class="lgroup"><div class="lghead">Still not done — see the section below</div><div class="lrow gap"><div class="lmark">✗</div><div class="lname">Shadbala (six-fold planetary strength)</div><div class="lres">not implemented</div></div><div class="lrow gap"><div class="lmark">✗</div><div class="lname">Ashtakavarga bindu strength</div><div class="lres">not implemented</div></div><div class="lrow gap"><div class="lmark">✗</div><div class="lname">Divisional charts beyond D9 (D10, D12, D60)</div><div class="lres">not computed</div></div><div class="lrow gap"><div class="lmark">✗</div><div class="lname">The name he will actually be CALLED</div><div class="lres">unknowable at birth</div></div></div></div>
+</section>
+
+<section>
+  <div class="eyebrow">The doshas</div>
+  <h2 class="sec-h">A clean bill, and I should have said so earlier</h2>
+  <p class="sec-lead">These are the four things Indian families actually ask about, and I had not checked a single one of them. All four are clear.</p>
+  <div class="bill"><div class="bcell"><div class="bq">Mangal dosha?</div><div class="ba">Clear</div><div class="bn">Mars sits in the 9th from the lagna, the 6th from the Moon and the 10th from Venus. None of those is a dosha house.</div></div><div class="bcell"><div class="bq">Kaal Sarp yoga?</div><div class="ba">Absent</div><div class="bn">The planets fall on both sides of the Rahu–Ketu axis — Moon and Venus on one arc, the other five on the other.</div></div><div class="bcell"><div class="bq">Gandanta?</div><div class="ba">Clear</div><div class="bn">The Moon is at 25°11' Sagittarius, nowhere near a water-to-fire junction. The lagna is clear too.</div></div><div class="bcell"><div class="bq">Sade Sati?</div><div class="ba">Not running</div><div class="bn">Saturn is in the 4th from his natal Moon, not the 12th, 1st or 2nd. It does not begin for many years.</div></div></div>
+</section>
+
+<section>
+  <div class="eyebrow">Cross-check one</div>
+  <h2 class="sec-h">The other letter table</h2>
+  <p class="sec-lead">Every number on the first two pages used the <strong>Chaldean</strong> table, which is correct for Cheiro and for Indian practice. But Chaldean and Pythagorean agree on only 10 of 26 letters, so a name can pass under one and fail under the other. I never showed you the second reading. Here it is.</p>
+  <div class="tscroll"><table>
+    <thead><tr><th>Name</th><th>Chaldean</th><th>Pythagorean</th><th>Agree alone?</th><th>With Goyal</th><th>Agree?</th></tr></thead>
+    <tbody><tr class="star"><td class="n">Dhyann</td><td class="m">21 → 3 Jupiter</td><td class="m">30 → 3 Jupiter</td><td class="m yes">yes</td><td class="m">36 → 9 Mars &nbsp;/&nbsp; 54 → 9 Mars</td><td class="m yes">yes</td></tr><tr><td class="n">Dheer</td><td class="m">21 → 3 Jupiter</td><td class="m">31 → 4 Rahu</td><td class="m no">no</td><td class="m">36 → 9 Mars &nbsp;/&nbsp; 55 → 1 Sun</td><td class="m no">no</td></tr><tr class="star"><td class="n">Dhanvin</td><td class="m">27 → 9 Mars</td><td class="m">36 → 9 Mars</td><td class="m yes">yes</td><td class="m">42 → 6 Venus &nbsp;/&nbsp; 60 → 6 Venus</td><td class="m yes">yes</td></tr><tr class="star"><td class="n">Dharmik</td><td class="m">19 → 1 Sun</td><td class="m">37 → 1 Sun</td><td class="m yes">yes</td><td class="m">34 → 7 Ketu &nbsp;/&nbsp; 61 → 7 Ketu</td><td class="m yes">yes</td></tr><tr><td class="n">Phalit</td><td class="m">22 → 4 Rahu</td><td class="m">30 → 3 Jupiter</td><td class="m no">no</td><td class="m">37 → 1 Sun &nbsp;/&nbsp; 54 → 9 Mars</td><td class="m no">no</td></tr><tr><td class="n">Bhargava</td><td class="m">21 → 3 Jupiter</td><td class="m">33 → 6 Venus</td><td class="m no">no</td><td class="m">36 → 9 Mars &nbsp;/&nbsp; 57 → 3 Jupiter</td><td class="m no">no</td></tr><tr><td class="n">Dhruv</td><td class="m">23 → 5 Mercury</td><td class="m">28 → 1 Sun</td><td class="m no">no</td><td class="m">38 → 2 Moon &nbsp;/&nbsp; 52 → 7 Ketu</td><td class="m no">no</td></tr></tbody>
+  </table></div>
+  <div class="callout">
+    <h3>Three names agree across both tables. Only one of them agrees on a root that passes.</h3>
+    <p>Chaldean and Pythagorean independently put <strong>Dhyann</strong> on <strong>Jupiter</strong> alone (21 and 30) and independently put it on <strong>Mars</strong> with the surname (36 and 54) &mdash; and both of those roots clear the gate. <strong>Dhanvin</strong> and <strong>Dharmik</strong> also agree across the two tables, but what they agree on is a <em>failing</em> root: Venus and Ketu respectively. <strong>Dheer</strong> and <strong>Bhargava</strong> do not agree at all &mdash; both drop to a different planet under Pythagorean, which is a genuine weakness on names I had ranked highly. So the second table does not overturn the answer, but it does thin the field behind it.</p>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Cross-check two</div>
+  <h2 class="sec-h">The digits his birth date is missing</h2>
+  <div class="panel">
+    <h4>The gap</h4>
+    <p>Written out, his date of birth is <strong>2 8 0 7 2 0 2 6</strong>. The digits it never uses are <strong>1, 3, 4, 5 and 9</strong> &mdash; and that list contains something worth pausing on: <strong>both his Moolank (1) and his Bhagyank (9) are absent from the date itself.</strong> A school of Indian numerology holds that the name should supply what the chart of birth left out.</p>
+    <h4 style="margin-top:22px">What each name supplies</h4>
+    <p><strong>Dhyann</strong> introduces 1, 3 and 9 &mdash; which is to say it supplies <em>both</em> of the missing numbers that govern him, plus Jupiter's 3. <strong>Dharmik</strong> fills the most ground (1, 3, 4, 9) but fails the full-name gate on other grounds. <strong>Dhruv</strong> fills only 3 and 5 and misses both of his governing digits, which is a third independent reason it is the wrong name for this child.</p>
+    <p style="color:var(--bone-3);font-size:14px">Stated plainly: this is a secondary school of thought, not a primary gate. I am reporting it because you asked for every reading, not because it outranks the compound and the root.</p>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Still outstanding</div>
+  <h2 class="sec-h">What I have not done, and whether it matters</h2>
+  <div class="panel">
+<h4>Shadbala and Ashtakavarga</h4>
+<p>These are the two real numerical strength systems in Vedic astrology, and I have computed <strong>neither</strong>. Both are substantial implementations rather than a formula, and I would rather tell you they are missing than estimate them. <strong>What they would affect:</strong> how confidently anyone can call one planet &ldquo;strongest&rdquo; in this chart. I have already pulled that claim off the first page for exactly this reason &mdash; it now says only that Mercury sits in its own sign, which is a fact rather than a ranking.</p>
+
+<h4 style="margin-top:24px">Divisional charts beyond the Navamsa</h4>
+<p>I computed the D9 and stopped. The D10 (career), D12 (parents) and D60 (fine detail) are not done. <strong>What they would affect:</strong> nothing about the name. The naming syllable is fixed by the Moon's pada in the rashi chart, and no divisional chart overrides it.</p>
+
+<h4 style="margin-top:24px">The name he will actually be called</h4>
+<p>This is the one genuine open question, and it is not a calculation. Cheiro's own rule is that the operative number belongs to <em>the name a person is most known by</em> &mdash; which for a newborn is unknowable. If the family settles on a pet name at home, that name carries its own number, and it is the one that will do the work for the first decade. <strong>What it would affect:</strong> potentially everything, which is why the recommendation is the one name that holds under both the first-name and full-name readings. It is the most robust answer available to a question that will not be fully settled for years.</p>
+
+<h4 style="margin-top:24px">And the honest structural limit</h4>
+<p>Everything here is computation and textual sourcing. A practising jyotishi reading this chart as a whole would weigh things a script cannot &mdash; the interplay of the yogas, the temperament the combination suggests, judgement built on many charts. <strong>This work is meant to give your Pandit something precise to react to, not to replace him.</strong></p>
+</div>
+</section>
+
+<section>
+  <div class="eyebrow">The bottom line</div>
+  <div class="callout">
+    <h3>Nothing here changes the recommendation. Three things reinforce it.</h3>
+    <p>The Navamsa cannot contradict the pada, because pada 4 <em>is</em> the fourth navamsa of that same arc &mdash; they are two views of one 3&deg;20' slice of sky. All four doshas are clear. And <strong>Dhyann</strong> now additionally survives the Pythagorean table intact and supplies both of the digits his birth date is missing. It was the answer on arithmetic; it is still the answer after the audit.</p>
+  </div>
+</section>
+
+<footer>
+  <span>Swiss Ephemeris · Lahiri · Chaldean and Pythagorean tables · Cheiro compounds 10&ndash;52 · Sāravalī 4.28&ndash;29</span>
+  <span>Private page · not indexed</span>
+</footer>
+</div>
+</body>
+</html>
