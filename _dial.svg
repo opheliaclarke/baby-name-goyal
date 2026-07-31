@@ -1,0 +1,84 @@
+<svg class="dial" viewBox="-30 0 660 600" role="img" aria-label="The Moon at 265 degrees 11 minutes sidereal: in the 20th nakshatra Purva Ashadha, and in the sign Dhanu (Sagittarius)">
+<circle class="ring" cx="300" cy="300" r="238"/><circle class="ring" cx="300" cy="300" r="288"/><circle class="ring" cx="300" cy="300" r="170"/><circle class="ring" cx="300" cy="300" r="214"/>
+<path class="nk" d="M302.51,12.01 A288,288 0 0 1 363.97,19.19 L352.86,67.95 A238,238 0 0 0 302.08,62.01 Z"/>
+<text class="nknum" x="330.5" y="38.8" transform="rotate(-83.3 330.5 38.8)">1</text>
+<path class="nk" d="M368.86,20.35 A288,288 0 0 1 427.00,41.52 L404.95,86.39 A238,238 0 0 0 356.91,68.90 Z"/>
+<text class="nknum" x="390.0" y="52.9" transform="rotate(-70.0 390.0 52.9)">2</text>
+<path class="nk" d="M431.50,43.77 A288,288 0 0 1 483.19,77.77 L451.39,116.35 A238,238 0 0 0 408.67,88.26 Z"/>
+<text class="nknum" x="444.5" y="80.3" transform="rotate(-56.7 444.5 80.3)">3</text>
+<path class="nk" d="M487.04,81.00 A288,288 0 0 1 529.50,126.01 L489.66,156.22 A238,238 0 0 0 454.57,119.02 Z"/>
+<text class="nknum" x="491.3" y="119.5" transform="rotate(-43.3 491.3 119.5)">4</text>
+<path class="nk" d="M532.50,130.04 A288,288 0 0 1 563.44,183.63 L517.70,203.83 A238,238 0 0 0 492.14,159.55 Z"/>
+<text class="nknum" x="527.8" y="168.5" transform="rotate(-30.0 527.8 168.5)">5</text>
+<path class="nk" d="M565.43,188.24 A288,288 0 0 1 583.18,247.52 L534.01,256.63 A238,238 0 0 0 519.35,207.64 Z"/>
+<text class="nknum" x="552.0" y="224.6" transform="rotate(-16.7 552.0 224.6)">6</text>
+<path class="nk" d="M584.05,252.47 A288,288 0 0 1 587.65,314.24 L537.71,311.76 A238,238 0 0 0 534.74,260.72 Z"/>
+<text class="nknum" x="562.6" y="284.7" transform="rotate(-3.3 562.6 284.7)">7</text>
+<path class="nk" d="M587.36,319.25 A288,288 0 0 1 576.61,380.19 L528.59,366.27 A238,238 0 0 0 537.47,315.91 Z"/>
+<text class="nknum" x="559.0" y="345.7" transform="rotate(10.0 559.0 345.7)">8</text>
+<path class="nk" d="M575.17,385.00 A288,288 0 0 1 550.66,441.82 L507.14,417.20 A238,238 0 0 0 527.40,370.25 Z"/>
+<text class="nknum" x="541.5" y="404.2" transform="rotate(23.3 541.5 404.2)">9</text>
+<path class="nk" d="M548.15,446.17 A288,288 0 0 1 511.20,495.80 L474.53,461.81 A238,238 0 0 0 505.07,420.79 Z"/>
+<text class="nknum" x="511.0" y="457.1" transform="rotate(36.7 511.0 457.1)">10</text>
+<path class="nk" d="M507.75,499.46 A288,288 0 0 1 460.35,539.23 L432.51,497.70 A238,238 0 0 0 471.68,464.83 Z"/>
+<text class="nknum" x="469.1" y="501.5" transform="rotate(50.0 469.1 501.5)">11</text>
+<path class="nk" d="M456.15,541.99 A288,288 0 0 1 400.86,569.76 L383.35,522.93 A238,238 0 0 0 429.04,499.98 Z"/>
+<text class="nknum" x="418.0" y="535.0" transform="rotate(63.3 418.0 535.0)">12</text>
+<path class="nk" d="M396.14,571.48 A288,288 0 0 1 335.93,585.75 L329.69,536.14 A238,238 0 0 0 379.45,524.35 Z"/>
+<text class="nknum" x="360.7" y="555.9" transform="rotate(76.7 360.7 555.9)">13</text>
+<path class="nk" d="M330.94,586.33 A288,288 0 0 1 269.06,586.33 L274.43,536.62 A238,238 0 0 0 325.57,536.62 Z"/>
+<text class="nknum" x="300.0" y="563.0" transform="rotate(270.0 300.0 563.0)">14</text>
+<path class="nk" d="M264.07,585.75 A288,288 0 0 1 203.86,571.48 L220.55,524.35 A238,238 0 0 0 270.31,536.14 Z"/>
+<text class="nknum" x="239.3" y="555.9" transform="rotate(283.3 239.3 555.9)">15</text>
+<path class="nk" d="M199.14,569.76 A288,288 0 0 1 143.85,541.99 L170.96,499.98 A238,238 0 0 0 216.65,522.93 Z"/>
+<text class="nknum" x="182.0" y="535.0" transform="rotate(296.7 182.0 535.0)">16</text>
+<path class="nk" d="M139.65,539.23 A288,288 0 0 1 92.25,499.46 L128.32,464.83 A238,238 0 0 0 167.49,497.70 Z"/>
+<text class="nknum" x="130.9" y="501.5" transform="rotate(310.0 130.9 501.5)">17</text>
+<path class="nk" d="M88.80,495.80 A288,288 0 0 1 51.85,446.17 L94.93,420.79 A238,238 0 0 0 125.47,461.81 Z"/>
+<text class="nknum" x="89.0" y="457.1" transform="rotate(323.3 89.0 457.1)">18</text>
+<path class="nk" d="M49.34,441.82 A288,288 0 0 1 24.83,385.00 L72.60,370.25 A238,238 0 0 0 92.86,417.20 Z"/>
+<text class="nknum" x="58.5" y="404.2" transform="rotate(336.7 58.5 404.2)">19</text>
+<path class="nk hot" d="M23.39,380.19 A288,288 0 0 1 12.64,319.25 L62.53,315.91 A238,238 0 0 0 71.41,366.27 Z"/>
+<text class="nknum hotnum" x="41.0" y="345.7" transform="rotate(350.0 41.0 345.7)">20</text>
+<path class="nk" d="M12.35,314.24 A288,288 0 0 1 15.95,252.47 L65.26,260.72 A238,238 0 0 0 62.29,311.76 Z"/>
+<text class="nknum" x="37.4" y="284.7" transform="rotate(363.3 37.4 284.7)">21</text>
+<path class="nk" d="M16.82,247.52 A288,288 0 0 1 34.57,188.24 L80.65,207.64 A238,238 0 0 0 65.99,256.63 Z"/>
+<text class="nknum" x="48.0" y="224.6" transform="rotate(376.7 48.0 224.6)">22</text>
+<path class="nk" d="M36.56,183.63 A288,288 0 0 1 67.50,130.04 L107.86,159.55 A238,238 0 0 0 82.30,203.83 Z"/>
+<text class="nknum" x="72.2" y="168.5" transform="rotate(390.0 72.2 168.5)">23</text>
+<path class="nk" d="M70.50,126.01 A288,288 0 0 1 112.96,81.00 L145.43,119.02 A238,238 0 0 0 110.34,156.22 Z"/>
+<text class="nknum" x="108.7" y="119.5" transform="rotate(403.3 108.7 119.5)">24</text>
+<path class="nk" d="M116.81,77.77 A288,288 0 0 1 168.50,43.77 L191.33,88.26 A238,238 0 0 0 148.61,116.35 Z"/>
+<text class="nknum" x="155.5" y="80.3" transform="rotate(416.7 155.5 80.3)">25</text>
+<path class="nk" d="M173.00,41.52 A288,288 0 0 1 231.14,20.35 L243.09,68.90 A238,238 0 0 0 195.05,86.39 Z"/>
+<text class="nknum" x="210.0" y="52.9" transform="rotate(430.0 210.0 52.9)">26</text>
+<path class="nk" d="M236.03,19.19 A288,288 0 0 1 297.49,12.01 L297.92,62.01 A238,238 0 0 0 247.14,67.95 Z"/>
+<text class="nknum" x="269.5" y="38.8" transform="rotate(443.3 269.5 38.8)">27</text>
+<path class="rs" d="M302.24,86.01 A214,214 0 0 1 405.05,113.56 L383.45,151.89 A170,170 0 0 0 301.78,130.01 Z"/>
+<text class="rsl" x="349.7" y="114.5" transform="rotate(-75.0 349.7 114.5)">Ar</text>
+<path class="rs" d="M408.93,115.80 A214,214 0 0 1 484.20,191.07 L446.33,213.46 A170,170 0 0 0 386.54,153.67 Z"/>
+<text class="rsl" x="435.8" y="164.2" transform="rotate(-45.0 435.8 164.2)">Ta</text>
+<path class="rs" d="M486.44,194.95 A214,214 0 0 1 513.99,297.76 L469.99,298.22 A170,170 0 0 0 448.11,216.55 Z"/>
+<text class="rsl" x="485.5" y="250.3" transform="rotate(-15.0 485.5 250.3)">Ge</text>
+<path class="rs" d="M513.99,302.24 A214,214 0 0 1 486.44,405.05 L448.11,383.45 A170,170 0 0 0 469.99,301.78 Z"/>
+<text class="rsl" x="485.5" y="349.7" transform="rotate(15.0 485.5 349.7)">Cn</text>
+<path class="rs" d="M484.20,408.93 A214,214 0 0 1 408.93,484.20 L386.54,446.33 A170,170 0 0 0 446.33,386.54 Z"/>
+<text class="rsl" x="435.8" y="435.8" transform="rotate(45.0 435.8 435.8)">Le</text>
+<path class="rs" d="M405.05,486.44 A214,214 0 0 1 302.24,513.99 L301.78,469.99 A170,170 0 0 0 383.45,448.11 Z"/>
+<text class="rsl" x="349.7" y="485.5" transform="rotate(75.0 349.7 485.5)">Vi</text>
+<path class="rs" d="M297.76,513.99 A214,214 0 0 1 194.95,486.44 L216.55,448.11 A170,170 0 0 0 298.22,469.99 Z"/>
+<text class="rsl" x="250.3" y="485.5" transform="rotate(285.0 250.3 485.5)">Li</text>
+<path class="rs" d="M191.07,484.20 A214,214 0 0 1 115.80,408.93 L153.67,386.54 A170,170 0 0 0 213.46,446.33 Z"/>
+<text class="rsl" x="164.2" y="435.8" transform="rotate(315.0 164.2 435.8)">Sc</text>
+<path class="rs hot" d="M113.56,405.05 A214,214 0 0 1 86.01,302.24 L130.01,301.78 A170,170 0 0 0 151.89,383.45 Z"/>
+<text class="rsl hotrs" x="114.5" y="349.7" transform="rotate(345.0 114.5 349.7)">Sg</text>
+<path class="rs" d="M86.01,297.76 A214,214 0 0 1 113.56,194.95 L151.89,216.55 A170,170 0 0 0 130.01,298.22 Z"/>
+<text class="rsl" x="114.5" y="250.3" transform="rotate(375.0 114.5 250.3)">Cp</text>
+<path class="rs" d="M115.80,191.07 A214,214 0 0 1 191.07,115.80 L213.46,153.67 A170,170 0 0 0 153.67,213.46 Z"/>
+<text class="rsl" x="164.2" y="164.2" transform="rotate(405.0 164.2 164.2)">Aq</text>
+<path class="rs" d="M194.95,113.56 A214,214 0 0 1 297.76,86.01 L298.22,130.01 A170,170 0 0 0 216.55,151.89 Z"/>
+<text class="rsl" x="250.3" y="114.5" transform="rotate(435.0 250.3 114.5)">Pi</text>
+<line class="moonray" x1="144.55" y1="313.07" x2="-2.93" y2="325.47"/>
+<circle class="moondot" cx="-2.93" cy="325.47" r="7"/>
+<text class="moonlbl" x="-26.8" y="327.5">MOON</text>
+</svg>
