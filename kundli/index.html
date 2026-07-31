@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>जन्म कुंडली — 28 जुलाई 2026, बठिंडा</title>
+<meta name="theme-color" content="#0F1430">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230F1430'/%3E%3Cpath d='M32 8 L56 32 L32 56 L8 32 Z' fill='none' stroke='%23C9A227' stroke-width='2.5'/%3E%3Cpath d='M8 8 L56 56 M56 8 L8 56' stroke='%23C9A227' stroke-width='1.2' opacity='.5'/%3E%3Ccircle cx='32' cy='32' r='3.5' fill='%23E8913A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600;800&family=Mukta:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lapis:#0F1430; --lapis-2:#161C43; --brass:#C9A227; --marigold:#E8913A;
+  --madder:#D4726A; --verdigris:#57A594;
+  --bone:#F3ECDD; --bone-2:#C4BDA6; --bone-3:#98937B;
+  --rule:rgba(201,162,39,.22);
+  --display:'Eczar',Georgia,serif; --body:'Mukta',system-ui,sans-serif; --mono:'IBM Plex Mono',monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--lapis);color:var(--bone);font-family:var(--body);
+  font-size:18px;line-height:1.75;overflow-x:hidden;
+  background-image:radial-gradient(ellipse 900px 600px at 78% -8%,rgba(201,162,39,.09),transparent 62%),
+                   radial-gradient(ellipse 700px 500px at 4% 42%,rgba(87,165,148,.05),transparent 60%);}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.22;margin:0;letter-spacing:0}
+p{margin:0 0 1em}
+a{color:var(--marigold)}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--brass);display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.eyebrow::after{content:"";flex:1;height:1px;background:var(--rule)}
+.back{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--bone-3);
+  display:inline-block;padding:34px 0 0;text-decoration:none}
+.back:hover{color:var(--marigold)}
+.hero{padding:30px 0 0}
+.hero h1{font-size:clamp(36px,5vw,58px);max-width:18ch}
+.hero h1 em{font-style:normal;color:var(--marigold)}
+.hero-sub{font-size:19px;color:var(--bone-2);max-width:62ch;margin-top:20px}
+.hero-sub strong{color:var(--bone);font-weight:600}
+section{padding:68px 0 0}
+.sec-h{font-size:clamp(25px,3.2vw,34px);margin-bottom:14px}
+.sec-lead{color:var(--bone-2);max-width:62ch;margin-bottom:30px}
+
+/* birth facts */
+/* 3 columns exactly — every fact group has 6 cells, so the grid never leaves a dead cell */
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  background:var(--rule);border:1px solid var(--rule);margin-top:34px}
+.fact{background:var(--lapis);padding:18px 20px}
+.fact .fk{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--brass);margin-bottom:5px}
+.fact .fv{font-family:var(--display);font-size:21px;font-weight:600;line-height:1.3}
+.fact .fn{font-size:14px;color:var(--bone-3);line-height:1.5;margin-top:3px}
+
+/* the two kundli charts — the signature element */
+.charts{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.chart-card{border:1px solid var(--rule);background:var(--lapis-2);padding:24px}
+.chart-card h3{font-size:22px;margin-bottom:3px}
+.chart-card .ch-sub{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;
+  color:var(--bone-3);margin-bottom:20px;line-height:1.6}
+svg.kundli{width:100%;height:auto;display:block}
+.kbox{fill:none;stroke:var(--brass);stroke-width:2.4}
+.kline{fill:none;stroke:var(--brass);stroke-width:1.5;opacity:.62}
+.ksign{font-family:'IBM Plex Mono',monospace;font-size:21px;fill:var(--bone-3);
+  text-anchor:middle;dominant-baseline:middle}
+.kgraha{font-family:'Eczar',serif;font-size:31px;font-weight:600;fill:var(--bone);
+  text-anchor:middle;dominant-baseline:middle}
+.kgraha.retro{fill:var(--madder)}
+.legend{display:flex;flex-wrap:wrap;gap:7px 16px;margin-top:24px;
+  font-family:var(--mono);font-size:12px;color:var(--bone-3)}
+.legend b{font-family:var(--display);font-size:16px;color:var(--bone-2);font-weight:600;margin-left:3px}
+
+/* tables */
+.tscroll{overflow-x:auto;border:1px solid var(--rule)}
+table{border-collapse:collapse;width:100%;min-width:660px;font-size:15px}
+th,td{text-align:right;padding:11px 15px;border-bottom:1px solid rgba(201,162,39,.11)}
+th:first-child,td:first-child{text-align:left}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--brass);font-weight:500;background:rgba(0,0,0,.2);white-space:nowrap}
+td{color:var(--bone-2)}
+td.g{font-family:var(--display);font-size:19px;color:var(--bone);font-weight:600;text-align:left}
+td.m{font-family:var(--mono);font-size:13.5px}
+td.st{font-size:13.5px;color:var(--marigold);text-align:left}
+tbody tr:hover{background:rgba(201,162,39,.05)}
+tr.hi td{background:rgba(201,162,39,.08)}
+tr.now td{background:rgba(87,165,148,.09)}
+tr.now td:first-child::after{content:" ← अभी चल रही";font-family:var(--mono);font-size:10.5px;
+  letter-spacing:.08em;color:var(--verdigris)}
+
+/* clean bill */
+.bill{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1px;
+  background:var(--rule);border:1px solid var(--rule)}
+.bcell{background:var(--lapis);padding:20px 22px}
+.bcell .bq{font-family:var(--display);font-size:20px;font-weight:600}
+.bcell .ba{font-family:var(--mono);font-size:12px;color:var(--verdigris);letter-spacing:.1em;
+  text-transform:uppercase;margin:7px 0 6px}
+.bcell.warn{background:rgba(212,114,106,.07);grid-column:1/-1;border-top:2px solid var(--madder)}
+.bcell.warn .ba{color:var(--madder)}
+.bcell.warn .bn strong{color:var(--bone)}
+.bcell .bn{font-size:14px;color:var(--bone-3);line-height:1.6}
+
+.callout{border:1px solid var(--brass);background:rgba(201,162,39,.06);padding:26px 30px;margin-top:32px}
+.callout h3{font-size:23px;margin-bottom:9px}
+.callout p{margin:0 0 .8em;color:var(--bone-2);font-size:17px}
+.callout p:last-child{margin-bottom:0}
+.callout strong{color:var(--bone);font-weight:600}
+.panel{border:1px solid var(--rule);background:var(--lapis-2);padding:28px 30px}
+.panel + .panel{margin-top:22px}
+.panel h4{font-family:var(--mono);font-size:10.5px;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--brass);margin:0 0 11px;font-weight:500}
+.panel h3{font-size:21px;margin:0 0 10px}
+.panel p{margin:0 0 13px;color:var(--bone-2);font-size:17px}
+.panel p:last-child{margin-bottom:0}
+.panel strong{color:var(--bone);font-weight:600}
+.warn{border-left:3px solid var(--madder);padding-left:18px;margin-top:20px}
+.warn p{font-size:15.5px;color:var(--bone-3);margin:0}
+.warn strong{color:var(--madder);font-weight:600}
+.reading{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:22px}
+
+/* scripture-name cards */
+.nmlist{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.nm{background:var(--lapis);padding:22px 24px;border-left:3px solid transparent}
+.nm.pass{border-left-color:var(--verdigris);background:rgba(87,165,148,.05)}
+.nm.half{border-left-color:var(--brass)}
+.nm.fail{border-left-color:rgba(201,162,39,.18)}
+.nm-h{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:11px}
+.nm-dev{font-family:var(--display);font-size:31px;font-weight:800;line-height:1.1}
+.nm-rom{font-family:var(--mono);font-size:13px;letter-spacing:.11em;color:var(--bone-3);
+  text-transform:uppercase}
+.nm-num{margin-left:auto;font-family:var(--mono);font-size:12px;letter-spacing:.06em;
+  color:var(--bone-3);white-space:nowrap}
+.nm-num span{opacity:.45}
+.nm.pass .nm-num{color:var(--verdigris)}
+.nm-scr{margin:0 0 9px;font-size:16.5px;color:var(--bone-2)}
+.nm-mean{margin:0;font-size:16px;color:var(--bone-2)}
+.nm-mean strong,.nm-scr strong{color:var(--bone);font-weight:600}
+.nm-cav{margin:10px 0 0;font-size:15px;color:var(--bone-3);border-left:2px solid rgba(212,114,106,.5);
+  padding-left:14px}
+.nm-cav strong,.nm-cav em{color:var(--madder);font-weight:600;font-style:normal}
+@media(max-width:620px){ .nm-num{margin-left:0;flex-basis:100%} }
+footer{margin-top:88px;padding:30px 0 60px;border-top:1px solid var(--rule);
+  font-family:var(--mono);font-size:11.5px;color:var(--bone-3);letter-spacing:.06em;
+  display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:900px){ .charts{grid-template-columns:1fr;gap:24px} }
+@media(max-width:820px){ .facts{grid-template-columns:repeat(2,1fr)} }
+@media(max-width:620px){ body{font-size:17px} .wrap{padding:0 18px} section{padding-top:52px}
+  .panel,.callout{padding:22px 20px} }
+@media(max-width:480px){ .facts{grid-template-columns:1fr} }
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="../">&larr; नाम की शॉर्टलिस्ट पर वापस</a>
+
+<header class="hero">
+  <div class="eyebrow">जन्म कुंडली · पूरा विवरण</div>
+  <h1>बेटे की <em>जन्म कुंडली</em></h1>
+  <p class="hero-sub">यह पूरी कुंडली स्विस एफ़ेमेरिस से, <strong>लाहिड़ी अयनांश</strong> पर गणना की गई है — वही पद्धति जो भारत में सरकारी पंचांग और लगभग हर पंडित जी इस्तेमाल करते हैं। नीचे लग्न कुंडली, नवमांश कुंडली, ग्रहों की पूरी स्थिति, पंचांग, दोष, योग और विंशोत्तरी दशा — सब कुछ सरल हिंदी में दिया है।</p>
+  <div class="facts"><div class="fact"><div class="fk">जन्म तिथि</div><div class="fv">28 जुलाई 2026</div><div class="fn">मंगलवार</div></div><div class="fact"><div class="fk">जन्म समय</div><div class="fv">प्रातः 10:15</div><div class="fn">भारतीय मानक समय</div></div><div class="fact"><div class="fk">जन्म स्थान</div><div class="fv">बठिंडा</div><div class="fn">पंजाब, भारत</div></div><div class="fact"><div class="fk">लग्न</div><div class="fv">कन्या</div><div class="fn">7°34'09" · स्वामी बुध</div></div><div class="fact"><div class="fk">चंद्र राशि</div><div class="fv">धनु</div><div class="fn">जन्म नक्षत्र पूर्वाषाढ़ा, पाद 4</div></div><div class="fact"><div class="fk">सूर्य राशि</div><div class="fv">कर्क</div><div class="fn">अयनांश 24°13'42" (लाहिड़ी)</div></div></div>
+</header>
+
+<section>
+  <div class="eyebrow">कुंडली</div>
+  <h2 class="sec-h">लग्न कुंडली और नवमांश</h2>
+  <p class="sec-lead">दोनों चक्र <strong>उत्तर भारतीय शैली</strong> में हैं — यानी घर (भाव) अपनी जगह स्थिर रहते हैं और राशियाँ घूमती हैं। हर खाने में लिखा <em>अंक</em> उस भाव की राशि बताता है (1 = मेष, 2 = वृषभ … 12 = मीन), और अक्षर ग्रह हैं।</p>
+  <div class="charts">
+    <div class="chart-card">
+      <h3>लग्न कुंडली <span style="font-family:var(--mono);font-size:13px;color:var(--bone-3)">(D1)</span></h3>
+      <p class="ch-sub">लग्न कन्या 7°34'09" — इसलिए पहला खाना कन्या का है।<br>यही असली जन्म कुंडली है, हर फल इसी से देखा जाता है।</p>
+      <svg class="kundli d1" viewBox="-6 -6 612 612" role="img" aria-label="North Indian style birth chart">
+<rect class="kbox" x="0" y="0" width="600" height="600"/>
+<line class="kline" x1="0" y1="0" x2="600" y2="600"/>
+<line class="kline" x1="600" y1="0" x2="0" y2="600"/>
+<polygon class="kline" points="300,0 600,300 300,600 0,300"/>
+<text class="ksign" x="300" y="52">6</text>
+<text class="kgraha" x="300" y="120">ल</text>
+<text class="ksign" x="150" y="38">7</text>
+<text class="ksign" x="42" y="152">8</text>
+<text class="ksign" x="92" y="302">9</text>
+<text class="kgraha" x="172" y="302">चं</text>
+<text class="ksign" x="42" y="452">10</text>
+<text class="ksign" x="150" y="568">11</text>
+<text class="kgraha retro" x="150" y="514">रा॰</text>
+<text class="ksign" x="300" y="560">12</text>
+<text class="kgraha retro" x="300" y="492">श॰</text>
+<text class="ksign" x="450" y="568">1</text>
+<text class="ksign" x="558" y="452">2</text>
+<text class="kgraha" x="508" y="428">मं</text>
+<text class="ksign" x="508" y="302">3</text>
+<text class="kgraha" x="428" y="302">बु</text>
+<text class="ksign" x="558" y="152">4</text>
+<text class="kgraha" x="508" y="159">सू</text>
+<text class="kgraha" x="508" y="197">गु</text>
+<text class="ksign" x="450" y="38">5</text>
+<text class="kgraha" x="450" y="73">शु</text>
+<text class="kgraha retro" x="450" y="111">के॰</text>
+</svg>
+    </div>
+    <div class="chart-card">
+      <h3>नवमांश कुंडली <span style="font-family:var(--mono);font-size:13px;color:var(--bone-3)">(D9)</span></h3>
+      <p class="ch-sub">नवमांश लग्न मीन — चंद्रमा का नवमांश वृश्चिक।<br>यह हर राशि को नौ हिस्सों में बाँटकर बनती है और ग्रह की असली ताक़त बताती है।</p>
+      <svg class="kundli d9" viewBox="-6 -6 612 612" role="img" aria-label="North Indian style birth chart">
+<rect class="kbox" x="0" y="0" width="600" height="600"/>
+<line class="kline" x1="0" y1="0" x2="600" y2="600"/>
+<line class="kline" x1="600" y1="0" x2="0" y2="600"/>
+<polygon class="kline" points="300,0 600,300 300,600 0,300"/>
+<text class="ksign" x="300" y="52">12</text>
+<text class="kgraha" x="300" y="120">ल</text>
+<text class="ksign" x="150" y="38">1</text>
+<text class="kgraha" x="150" y="92">बु</text>
+<text class="ksign" x="42" y="152">2</text>
+<text class="ksign" x="92" y="302">3</text>
+<text class="kgraha retro" x="172" y="302">के॰</text>
+<text class="ksign" x="42" y="452">4</text>
+<text class="ksign" x="150" y="568">5</text>
+<text class="kgraha" x="150" y="514">मं</text>
+<text class="ksign" x="300" y="560">6</text>
+<text class="ksign" x="450" y="568">7</text>
+<text class="kgraha" x="450" y="495">सू</text>
+<text class="kgraha" x="450" y="533">गु</text>
+<text class="ksign" x="558" y="452">8</text>
+<text class="kgraha" x="508" y="409">चं</text>
+<text class="kgraha" x="508" y="447">शु</text>
+<text class="ksign" x="508" y="302">9</text>
+<text class="kgraha retro" x="428" y="302">रा॰</text>
+<text class="ksign" x="558" y="152">10</text>
+<text class="kgraha retro" x="508" y="178">श॰</text>
+<text class="ksign" x="450" y="38">11</text>
+</svg>
+    </div>
+  </div>
+  <div class="legend"><span>सू<b>सूर्य</b></span><span>चं<b>चंद्र</b></span><span>मं<b>मंगल</b></span><span>बु<b>बुध</b></span><span>गु<b>गुरु</b></span><span>शु<b>शुक्र</b></span><span>श<b>शनि</b></span><span>रा<b>राहु</b></span><span>के<b>केतु</b></span><span>ल<b>लग्न</b></span><span style="color:var(--madder)">॰<b style="color:var(--madder)">वक्री</b></span></div>
+  <div class="warn"><p><strong>एक ज़रूरी बात:</strong> लग्न (कन्या) पूरी तरह जन्म के समय पर टिका है। यह लग्न तभी बनता है जब जन्म <strong>सुबह 9:40 से 11:58</strong> के बीच हुआ हो। अगर अस्पताल का लिखा समय 10:15 से आधे घंटे से ज़्यादा आगे-पीछे है, तो लग्न बदल सकता है और उससे जुड़ी बातें भी। <strong>लेकिन नाम का अक्षर नहीं बदलेगा</strong> — चंद्रमा पूर्वाषाढ़ा के चौथे पाद में 06:32 से 13:11 तक रहा, यानी क़रीब पौने सात घंटे। इतनी बड़ी खिड़की में समय की छोटी-मोटी ग़लती कोई फ़र्क़ नहीं डालती।</p></div>
+</section>
+
+<section>
+  <div class="eyebrow">ग्रह स्थिति</div>
+  <h2 class="sec-h">कौन सा ग्रह कहाँ बैठा है</h2>
+  <p class="sec-lead">यह कुंडली की पूरी नींव है। <strong>अंश</strong> यानी वह ग्रह अपनी राशि में कितना आगे बढ़ चुका है, और <strong>स्थिति</strong> बताती है कि ग्रह मज़बूत है, अपने घर में है, या सूर्य के बहुत पास होने से अस्त (कमज़ोर) है।</p>
+  <div class="tscroll"><table>
+    <thead><tr><th>ग्रह</th><th>राशि</th><th>अंश</th><th>भाव</th><th>नक्षत्र</th><th>पाद</th><th>नवमांश</th><th>स्थिति</th></tr></thead>
+    <tbody><tr class=""><td class="g">सूर्य</td><td>कर्क</td><td class="m">10°55'26"</td><td class="m">11</td><td>पुष्य</td><td class="m">3</td><td>तुला</td><td class="st">—</td></tr><tr class="hi"><td class="g">चंद्र</td><td>धनु</td><td class="m">25°11'36"</td><td class="m">4</td><td>पूर्वाषाढ़ा</td><td class="m">4</td><td>वृश्चिक</td><td class="st">—</td></tr><tr class=""><td class="g">मंगल</td><td>वृषभ</td><td class="m">26°15'36"</td><td class="m">9</td><td>मृगशिरा</td><td class="m">1</td><td>सिंह</td><td class="st">—</td></tr><tr class="hi"><td class="g">बुध</td><td>मिथुन</td><td class="m">22°57'54"</td><td class="m">10</td><td>पुनर्वसु</td><td class="m">1</td><td>मेष</td><td class="st">स्वगृही</td></tr><tr class="hi"><td class="g">गुरु</td><td>कर्क</td><td class="m">11°53'20"</td><td class="m">11</td><td>पुष्य</td><td class="m">3</td><td>तुला</td><td class="st">उच्च · अस्त</td></tr><tr class=""><td class="g">शुक्र</td><td>सिंह</td><td class="m">25°50'59"</td><td class="m">12</td><td>पूर्वा फाल्गुनी</td><td class="m">4</td><td>वृश्चिक</td><td class="st">—</td></tr><tr class=""><td class="g">शनि</td><td>मीन</td><td class="m">20°31'03"</td><td class="m">7</td><td>रेवती</td><td class="m">2</td><td>मकर</td><td class="st">स्थिर-वक्री</td></tr><tr class=""><td class="g">राहु</td><td>कुंभ</td><td class="m">6°54'58"</td><td class="m">6</td><td>शतभिषा</td><td class="m">1</td><td>धनु</td><td class="st">—</td></tr><tr class=""><td class="g">केतु</td><td>सिंह</td><td class="m">6°54'58"</td><td class="m">12</td><td>मघा</td><td class="m">3</td><td>मिथुन</td><td class="st">—</td></tr></tbody>
+  </table></div>
+</section>
+
+<section>
+  <div class="eyebrow">पंचांग</div>
+  <h2 class="sec-h">जन्म के दिन का पंचांग</h2>
+  <div class="facts" style="margin-top:0"><div class="fact"><div class="fk">वार</div><div class="fv">मंगलवार</div><div class="fn">मंगल का दिन</div></div><div class="fact"><div class="fk">तिथि</div><div class="fv">शुक्ल पक्ष चतुर्दशी</div><div class="fn">पूर्णिमा से एक दिन पहले</div></div><div class="fact"><div class="fk">नक्षत्र</div><div class="fv">पूर्वाषाढ़ा 4</div><div class="fn">चंद्रमा जिसमें था</div></div><div class="fact"><div class="fk">योग</div><div class="fv">विष्कुम्भ</div><div class="fn">सूर्य और चंद्र की दूरी से</div></div><div class="fact"><div class="fk">करण</div><div class="fv">वणिज</div><div class="fn">तिथि का आधा हिस्सा</div></div><div class="fact"><div class="fk">सूर्योदय</div><div class="fv">05:46</div><div class="fn">सूर्यास्त 19:27</div></div></div>
+</section>
+
+<section>
+  <div class="eyebrow">जन्म नक्षत्र</div>
+  <h2 class="sec-h">पूर्वाषाढ़ा, चौथा पाद</h2>
+  <p class="sec-lead">चंद्रमा जिस नक्षत्र में होता है, उसी से नामकरण का अक्षर निकलता है और उसी से जन्म की दशा शुरू होती है। इसलिए यह कुंडली का सबसे ज़्यादा काम आने वाला हिस्सा है।</p>
+  <div class="facts" style="margin-top:0"><div class="fact"><div class="fk">नक्षत्र</div><div class="fv">पूर्वाषाढ़ा</div><div class="fn">पाद 4 — नाम का अक्षर ढा</div></div><div class="fact"><div class="fk">देवता</div><div class="fv">अप् (जल देवता)</div><div class="fn">जल तत्व</div></div><div class="fact"><div class="fk">स्वामी ग्रह</div><div class="fv">शुक्र</div><div class="fn">इसीलिए जन्म की दशा शुक्र से शुरू</div></div><div class="fact"><div class="fk">प्रतीक</div><div class="fv">हाथी का दाँत · सूप (छाज)</div><div class="fn">‘पहली अजेय’ — जो हारती नहीं</div></div><div class="fact"><div class="fk">गण</div><div class="fv">मनुष्य</div><div class="fn">वर्ण ब्राह्मण · नाड़ी मध्य</div></div><div class="fact"><div class="fk">योनि</div><div class="fv">वानर (नर)</div><div class="fn">राशि स्वामी गुरु</div></div></div>
+  <div class="panel" style="margin-top:24px">
+    <h4>नामकरण का अक्षर</h4>
+    <p>चंद्रमा <strong>धनु राशि में 25°11'36"</strong> पर था, यानी <strong>पूर्वाषाढ़ा नक्षत्र का चौथा पाद</strong>। शास्त्र (अवकहड़ा चक्र) के अनुसार पूर्वाषाढ़ा के चार पादों के अक्षर हैं <strong>भू · धा · फा · ढा</strong> — और चौथे पाद का अक्षर <strong>ढा</strong> है। पंडित जी ने जो <em>bh, dh, F</em> बताए थे, वे पूरे नक्षत्र के चारों अक्षर हैं; वे सही थे, बस पाद तक सीमित नहीं किए थे। बच्चे का पाद चौथा है, इसलिए सही अक्षर <strong>ढ / ध (Dh)</strong> है।</p>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">दोष जाँच</div>
+  <h2 class="sec-h">जो बातें हर परिवार पूछता है</h2>
+  <p class="sec-lead">मंगल दोष, कालसर्प, साढ़े साती और गंडमूल — <strong>चारों साफ़ हैं।</strong> लेकिन एक पाँचवीं
+  चीज़ है जो चल रही है और जिसे बताना ज़रूरी है, इसलिए वह भी नीचे लाल में दी गई है।</p>
+  <div class="bill"><div class="bcell"><div class="bq">मंगल दोष?</div><div class="ba">नहीं है</div><div class="bn">मंगल लग्न से 9वें, चंद्र से 6वें और शुक्र से 10वें भाव में है। दोष 1, 2, 4, 7, 8, 12 भाव से बनता है — इनमें से एक भी नहीं। (पुराने ग्रंथ पाँच भाव गिनाते हैं, छह वाली सूची बाद की है — पर यहाँ फ़र्क़ नहीं पड़ता, तीनों में से कोई भी भाव किसी भी सूची में नहीं आता।)</div></div><div class="bcell"><div class="bq">कालसर्प योग?</div><div class="ba">नहीं है</div><div class="bn">कालसर्प तब बनता है जब सातों ग्रह राहु-केतु की एक ही तरफ़ आ जाएँ। यहाँ चंद्र और शुक्र एक तरफ़ हैं, बाक़ी पाँच दूसरी तरफ़ — इसलिए बनता ही नहीं।</div></div><div class="bcell"><div class="bq">साढ़े साती?</div><div class="ba">नहीं चल रही</div><div class="bn">साढ़े साती तब होती है जब शनि चंद्र से 12वें, 1ले या 2रे भाव में हो। यहाँ शनि चंद्रमा से 4वें भाव में है — इसलिए साढ़े साती नहीं है।</div></div><div class="bcell"><div class="bq">गंडमूल / गंडांत?</div><div class="ba">नहीं है</div><div class="bn">चंद्रमा धनु में 25°11'36" पर है — राशि के आख़िरी सिरे से दूर। लग्न भी साफ़ है। चंद्रमा सूर्य से 164.3° दूर, यानी लगभग पूरा चाँद — शास्त्र में यह मज़बूत मन का लक्षण है।</div></div><div class="bcell warn"><div class="bq">ढैया (कंटक शनि)?</div><div class="ba">हाँ, चल रही है</div><div class="bn">यह वह बात है जो ज़्यादातर रिपोर्ट में नहीं लिखी जाती, इसलिए साफ़ लिख रहा हूँ। शनि चंद्रमा से <strong>4वें भाव</strong> (मीन) में है, और चौथे या आठवें में शनि को <strong>ढैया</strong> कहते हैं — ढाई साल की छोटी साढ़े साती। यह जन्म से चल रही है और <strong>24 फ़रवरी 2028</strong> तक रहेगी। घबराने की बात नहीं — बच्चों की ढैया आम तौर पर सेहत और माँ के आराम पर दिखती है, और यह अपने आप ख़त्म हो जाती है। पर इसे छिपाना ग़लत होता।</div></div></div>
+</section>
+
+<section>
+  <div class="eyebrow">योग</div>
+  <h2 class="sec-h">कुंडली के ख़ास योग</h2>
+  <div class="panel"><h4>1 · भद्र महापुरुष योग — बनता है</h4><p>बुध अपनी ही राशि <strong>मिथुन</strong> में, और वह भी <strong>10वें भाव</strong> में (केंद्र) बैठा है। जब बुध अपने घर या उच्च का होकर केंद्र में हो तो <strong>भद्र महापुरुष योग</strong> बनता है — यह पंच महापुरुष योगों में से एक है। सीधा मतलब: <strong>दिमाग़, बोलचाल, हिसाब-किताब और पढ़ाई-लिखाई इस बच्चे की सबसे बड़ी ताक़त रहेगी।</strong> लग्न का स्वामी भी बुध ही है, इसलिए यह योग सीधे बच्चे की अपनी शख़्सियत पर लगता है, किसी और के ज़रिए नहीं।</p><p style="font-size:15px;color:var(--bone-3)">एक बात साफ़ कर दूँ: फलदीपिका (6.1 और 6.4), बृहत् पाराशर होरा शास्त्र (75.1–2), सारावली (37.2) और जातक पारिजात (7.59) — चारों इस योग के साथ शब्द <em>बलिभिः</em> यानी “ग्रह के बलवान होने पर” जोड़ते हैं। वह बल <strong>षड्बल</strong> से नापा जाता है, जो यहाँ नहीं निकाला गया। इसलिए योग <strong>बनता तो है</strong>, पर वह कितना बलवान है, यह अलग गणना माँगता है। ⭐ अच्छी बात यह है कि फलदीपिका 6.4 इसे लग्न और <em>चंद्रमा दोनों</em> से देखने को कहती है (<em>लग्नेन्द्वोरपि</em>) — और बुध चंद्रमा से भी केंद्र (7वें) में पड़ता है, यानी दोनों तरफ़ से बनता है।</p><h4 style="margin-top:24px">2 · गुरु उच्च का — पर अस्त</h4><p>गुरु <strong>कर्क राशि में उच्च का</strong> है, जो कुंडली की सबसे शुभ बातों में से एक है। <strong>लेकिन ईमानदारी से एक कमी भी है:</strong> गुरु सूर्य से सिर्फ़ <strong>0.97°</strong> दूर है — इतना पास कि वह <strong>अस्त</strong> (सूर्य की रोशनी में छिपा) माना जाता है। इसका मतलब यह नहीं कि गुरु ख़राब हो गया; मतलब यह है कि उसका फल <strong>बाहर दिखने में देर करेगा</strong> और अक्सर पिता, बड़ों या किसी अधिकार वाले व्यक्ति के ज़रिए आएगा — अपने आप अलग से नहीं। बहुत सी वेबसाइटें यह बात छिपा जाती हैं और सिर्फ़ "गुरु उच्च का है" लिखकर छोड़ देती हैं।</p><h4 style="margin-top:24px">3 · गजकेसरी योग — नहीं बनता</h4><p>गजकेसरी तब बनता है जब गुरु चंद्रमा से 1, 4, 7 या 10वें भाव में हो। यहाँ गुरु चंद्रमा से <strong>8वें</strong> भाव में है, इसलिए यह योग <strong>नहीं</strong> है। यह लिखना ज़रूरी है क्योंकि यह इतना आम योग है कि लोग मान लेते हैं कि हर कुंडली में होगा।</p></div>
+</section>
+
+<section>
+  <div class="eyebrow">विंशोत्तरी दशा</div>
+  <h2 class="sec-h">कौन सा ग्रह किस उम्र में फल देगा</h2>
+  <p class="sec-lead">विंशोत्तरी दशा 120 साल का चक्र है और यह जन्म के चंद्र नक्षत्र से शुरू होती है। जन्म के समय जो दशा आधी बीत चुकी होती है, बच्चे को उसका बचा हुआ हिस्सा मिलता है — इसी को <strong>दशा शेष</strong> कहते हैं।</p>
+  <div class="tscroll"><table>
+    <thead><tr><th>महादशा</th><th>से</th><th>तक</th><th>कुल वर्ष</th></tr></thead>
+    <tbody><tr class="now"><td class="g">शुक्र</td><td class="m">28 जुलाई 2026</td><td class="m">12 अक्टूबर 2028</td><td class="m">2.21 (शेष)</td></tr><tr class=""><td class="g">सूर्य</td><td class="m">12 अक्टूबर 2028</td><td class="m">13 अक्टूबर 2034</td><td class="m">6</td></tr><tr class=""><td class="g">चंद्र</td><td class="m">13 अक्टूबर 2034</td><td class="m">12 अक्टूबर 2044</td><td class="m">10</td></tr><tr class=""><td class="g">मंगल</td><td class="m">12 अक्टूबर 2044</td><td class="m">13 अक्टूबर 2051</td><td class="m">7</td></tr><tr class=""><td class="g">राहु</td><td class="m">13 अक्टूबर 2051</td><td class="m">12 अक्टूबर 2069</td><td class="m">18</td></tr><tr class=""><td class="g">गुरु</td><td class="m">12 अक्टूबर 2069</td><td class="m">12 अक्टूबर 2085</td><td class="m">16</td></tr><tr class=""><td class="g">शनि</td><td class="m">12 अक्टूबर 2085</td><td class="m">12 अक्टूबर 2104</td><td class="m">19</td></tr><tr class=""><td class="g">बुध</td><td class="m">12 अक्टूबर 2104</td><td class="m">13 अक्टूबर 2121</td><td class="m">17</td></tr><tr class=""><td class="g">केतु</td><td class="m">13 अक्टूबर 2121</td><td class="m">12 अक्टूबर 2128</td><td class="m">7</td></tr></tbody>
+  </table></div>
+  <div class="panel" style="margin-top:26px">
+    <h4>चल रही महादशा के अंदर की अंतर्दशा</h4>
+    <p>जन्म के समय <strong>शुक्र की महादशा</strong> पहले से चल रही थी और उसका <strong>2 साल 2 महीने 15 दिन</strong> बचा था। उसके अंदर की अंतर्दशाएँ: <strong>बुध</strong> — 13 अगस्त 2027 तक · <strong>केतु</strong> — 12 अक्टूबर 2028 तक। यानी जन्म के वक़्त शुक्र-बुध चल रही थी। इसके बाद <strong>सूर्य की महादशा</strong> 12 अक्टूबर 2028 से शुरू होगी।</p>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">कुंडली का विवरण</div>
+  <h2 class="sec-h">सरल भाषा में पूरी कुंडली</h2>
+  <p class="sec-lead">यहाँ ऊपर की सारी गणना को आम बोलचाल की हिंदी में समझाया गया है — बिना किसी भारी-भरकम शब्द के। जो अच्छा है वह भी लिखा है, और जिस पर ध्यान देना चाहिए वह भी।</p>
+  <div class="reading"><div class="panel"><h3>शख़्सियत — कैसा बच्चा होगा</h3><p>लग्न <strong>कन्या</strong> है और उसका स्वामी बुध अपनी ही राशि में, 10वें भाव में बैठा है। कन्या लग्न वाले बच्चे आम तौर पर <strong>बारीकी से सोचने वाले, साफ़-सुथरे और तर्क करने वाले</strong> होते हैं — भावना में बहकर फ़ैसला कम करते हैं, पहले जाँचते हैं। बुध का अपने घर में और काम के भाव में होना इसे और मज़बूत करता है।</p><p>दूसरी तरफ़ चंद्रमा <strong>धनु</strong> में है, जो गुरु की राशि है और आग तत्व की है। इसका मतलब मन <strong>खुले विचारों वाला, उम्मीद से भरा और सीधी बात कहने वाला</strong> होगा। तो अंदर से यह बच्चा आशावादी और खुलकर बोलने वाला होगा, पर बाहर से नाप-तोलकर चलने वाला। यह मेल आम तौर पर अच्छा माना जाता है।</p></div><div class="panel"><h3>मन, माँ और घर</h3><p>चंद्रमा <strong>4वें भाव</strong> में है। चौथा भाव माँ, घर, ज़मीन-जायदाद, गाड़ी और मन के सुख का भाव है। चंद्रमा का यहाँ होना <strong>बहुत शुभ माना जाता है</strong> — माँ से गहरा लगाव, घर से जुड़ाव और मन की शांति। और चंद्रमा सूर्य से 164.3° दूर है, यानी लगभग पूरा चाँद — शास्त्र कहते हैं कि ऐसा चंद्रमा <strong>मज़बूत</strong> होता है, कमज़ोर नहीं।</p><p>चंद्रमा का नक्षत्र <strong>पूर्वाषाढ़ा</strong> है, जिसका नाम का मतलब ही है <em>"जो हारती नहीं"</em>। इसका देवता जल है और स्वामी शुक्र। इस नक्षत्र वालों के बारे में शास्त्र कहते हैं कि वे <strong>जल्दी हार नहीं मानते</strong> — बहस में भी और ज़िंदगी में भी। माता-पिता को यह ज़िद्दीपन की तरह लग सकता है; असल में यही इसकी सबसे बड़ी ताक़त है।</p></div><div class="panel"><h3>पढ़ाई और दिमाग़</h3><p>यह इस कुंडली का सबसे मज़बूत हिस्सा है। <strong>भद्र महापुरुष योग</strong> बन रहा है (बुध अपनी राशि में, 10वें भाव में), और बुध ही लग्न का स्वामी भी है। बुध पढ़ाई, गणित, भाषा, लिखने-बोलने और हिसाब-किताब का ग्रह है।</p><p>साथ में गुरु <strong>उच्च का</strong> है — गुरु ज्ञान और गहराई का ग्रह है। तो पढ़ाई-लिखाई में यह बच्चा अच्छा रहेगा, ख़ासकर <strong>ऐसे विषयों में जहाँ तर्क और भाषा दोनों चाहिए</strong>। बस एक बात ध्यान रखें: गुरु अस्त है, इसलिए उसका फल <strong>धीरे-धीरे और देर से</strong> खुलता है। शुरू में औसत लगने वाला बच्चा बाद में बहुत आगे निकल सकता है — जल्दबाज़ी में उसे आँकें नहीं।</p></div><div class="panel"><h3>धन, लाभ और परिवार</h3><p>सूर्य और गुरु दोनों <strong>11वें भाव</strong> में हैं। ग्यारहवाँ भाव कमाई, लाभ, बड़े भाई-बहन और दोस्तों-जान-पहचान का है। यहाँ दो बड़े ग्रहों का होना, और उनमें से एक का उच्च का होना, <strong>कमाई के लिए अच्छा संकेत</strong> है — पैसा अक्सर जान-पहचान और नेटवर्क से आएगा।</p><p>मंगल <strong>9वें भाव</strong> में है, जो भाग्य और धर्म का भाव है — मेहनत करने की हिम्मत देता है। राहु <strong>6वें भाव</strong> में है, और छठे भाव का राहु <strong>अच्छा माना जाता है</strong>: मुक़ाबले, विरोधी और झगड़े सँभालने में यह मदद करता है।</p></div><div class="panel"><h3>जिन बातों पर ध्यान देना है</h3><p><strong>शनि मीन में 7वें भाव में है, और वह जन्म से ठीक एक दिन पहले — 27 जुलाई को — वक्री हुआ था, यानी जन्म के वक़्त वह लगभग रुका हुआ (स्थिर) था।</strong> रुका हुआ ग्रह अपनी जगह पर सबसे ज़्यादा असर डालता है, इसलिए इस कुंडली में शनि को हल्के में नहीं लेना चाहिए। सातवाँ भाव साझेदारी और शादी का है। शनि यहाँ होने का सीधा मतलब यह नहीं कि कुछ बुरा होगा — मतलब यह है कि इस मामले में <strong>चीज़ें देर से और ठोक-बजाकर होंगी</strong>। जल्दी में लिया गया कोई भी साझेदारी का फ़ैसला इस बच्चे के लिए ठीक नहीं रहेगा। यह बात 25 साल बाद काम आएगी, अभी सिर्फ़ जान लीजिए।</p><p><strong>शुक्र और केतु 12वें भाव में हैं।</strong> बारहवाँ भाव ख़र्च, विदेश और एकांत का है। शुक्र सुख-सुविधा का ग्रह है और वह ख़र्च के भाव में बैठा है, इसलिए <strong>पैसा हाथ में रुकने की आदत बचपन से डालनी पड़ेगी</strong> — यह सिखाई जा सकने वाली चीज़ है। अच्छी बात यह है कि यही स्थिति <strong>विदेश जाने या विदेश से जुड़े काम</strong> के लिए भी जानी जाती है।</p><p><strong>गुरु का अस्त होना</strong> — ऊपर लिखा ही है, पर दोहराना ज़रूरी है, क्योंकि यही इस कुंडली की सबसे बड़ी कमी है और यही वह बात है जो ज़्यादातर मुफ़्त रिपोर्ट में नहीं लिखी जाती।</p></div><div class="panel"><h3>समय — कब क्या</h3><p>जन्म के समय <strong>शुक्र की महादशा</strong> चल रही थी, जिसका 2 साल 2 महीने बचा था। शुक्र इस बच्चे के जन्म नक्षत्र का स्वामी भी है — यानी शुक्र इसकी ज़िंदगी में ख़ास रहेगा।</p><p>उसके बाद <strong>सूर्य की महादशा 12 अक्टूबर 2028 से 13 अक्टूबर 2034 तक</strong> — यह वह उम्र है जब बच्चा स्कूल शुरू करेगा; सूर्य आत्मविश्वास और अनुशासन देता है। फिर <strong>चंद्र की महादशा 13 अक्टूबर 2034 से 12 अक्टूबर 2044 तक</strong> पूरे दस साल — और चंद्रमा इस कुंडली में मज़बूत है, चौथे भाव में। <strong>पढ़ाई के सबसे अहम साल इसी दशा में पड़ेंगे, और यह अच्छी ख़बर है।</strong></p><p><strong>मंगल की महादशा 12 अक्टूबर 2044</strong> से शुरू होगी — यह करियर बनाने के साल हैं और मंगल इस कुंडली में भाग्य भाव में है, इसलिए मेहनत का फल मिलेगा।</p></div></div>
+  <div class="warn"><p><strong>ईमानदारी से एक बात:</strong> यह गणना और शास्त्रों के हवाले पर आधारित है। ग्रहों की स्थिति, दशा, दोष और योग — यह सब सटीक है और इसे कोई भी पंडित जी जाँच सकते हैं। लेकिन कुंडली का <em>फलादेश</em> (यानी आगे क्या होगा) हमेशा व्याख्या होती है, गणना नहीं। इसे उसी नज़र से पढ़ें।</p></div>
+</section>
+
+<section id="naam">
+  <div class="eyebrow">वैदिक और धार्मिक नाम</div>
+  <h2 class="sec-h">शास्त्रों में आए हुए नाम</h2>
+  <p class="sec-lead">आपने कहा था कि नाम वेदों और धर्म से जुड़ा हो। इसलिए हर नाम के साथ यह भी लिखा है कि वह <strong>किस ग्रंथ में, किस जगह</strong> आया है। जिस नाम का कोई शास्त्रीय प्रमाण नहीं मिला, उसे शामिल ही नहीं किया गया।</p>
+  <div class="callout" style="margin-top:0"><h3>⭐ सबसे बड़ी बात: पाद-4 का असली अक्षर ढ है, और पूरे संस्कृत कोश में उस अक्षर का सिर्फ़ एक देवता-नाम है</h3><p>मोनियर-विलियम्स में <strong>ध</strong> से 3,587 शब्द हैं और <strong>भ</strong> से 6,736। लेकिन <strong>ढ</strong> का पूरा खंड सिर्फ़ <strong>52 शब्दों</strong> का है — और उनमें देवता का नाम सिर्फ़ एक है: <strong>ढुण्ढि</strong> (गणेश)। बाक़ी सब कुत्ता, कुत्ते की पूँछ, साँप, नगाड़ा, ढाल, दिल्ली, हंस जैसे शब्द हैं। यानी पाद-4 के कड़े अक्षर <strong>ढा</strong> पर शास्त्र से जुड़ा विकल्प <em>एक ही</em> मौजूद है।</p><p style="margin-top:.7em">व्यवहार में लगभग हर पंडित <strong>ध (dental)</strong> को ही चलाते हैं, और हमारे सारे नाम उसी पर हैं। पर यह बात आपके पंडित जी से एक बार पूछ लेनी चाहिए।</p></div><h3 style="font-family:var(--display);font-size:24px;margin:44px 0 8px">शास्त्र में प्रमाणित नाम</h3><p style="color:var(--bone-2);max-width:62ch;margin-bottom:26px">हर नाम के साथ दो अंक दिए हैं — <strong>पहला</strong> अकेले नाम का, <strong>दूसरा</strong> “नाम + गोयल” का। नाम तभी पूरी तरह पास है जब दोनों सही हों। ⚠ ध्यान दें: <strong>अंक सिर्फ़ छाँटते हैं, चुनते नहीं</strong> — पहले अर्थ और भाषा की जाँच, उसके बाद अंक।</p><div class="nmlist"><div class="nm pass"><div class="nm-h"><span class="nm-dev">भार्गव</span><span class="nm-rom">Bhargava</span><span class="nm-num">21 <span>·</span> 36 <span>·</span> दोनों गेट पास</span></div><p class="nm-scr">भृगु ऋषि का वंशज। मूल शब्द <strong>भर्ग</strong> वही है जो <strong>गायत्री मंत्र (ऋग्वेद 3.62.10)</strong> में आता है; अमरकोश 1.1.79 इसे शिव के नामों में गिनता है; चार शिव-सहस्रनामों में है; और शिवरहस्य का पूरा पाँचवाँ अंश ही <em>भर्गाख्यः पञ्चमांशः</em> कहलाता है।</p><p class="nm-mean"><strong>अर्थ:</strong> तेज, दिव्य प्रकाश — सायण के अनुसार “अज्ञान को जला देने वाला स्वयंप्रकाश”।</p><p class="nm-cav">पायथागोरियन तालिका में यह गुरु से शुक्र पर चला जाता है — यानी दूसरी पद्धति इससे सहमत नहीं।</p></div><div class="nm pass"><div class="nm-h"><span class="nm-dev">धीर</span><span class="nm-rom">Dheer</span><span class="nm-num">21 <span>·</span> 36 <span>·</span> दोनों गेट पास</span></div><p class="nm-scr"><strong>कठोपनिषद् 2.1.2</strong> — <em>अथ धीरा अमृतत्वं विदित्वा ध्रुवम्…</em> इसी एक श्लोक में दोनों बड़े नाम (धीर और ध्रुव) साथ आते हैं।</p><p class="nm-mean"><strong>अर्थ:</strong> धैर्यवान, स्थिर बुद्धि वाला, समझदार।</p><p class="nm-cav">हिंदी में <em>धीरे</em> = “slowly”; <em>धीरा</em> लड़की का नाम है; और <em>ढेर/ढेढ़</em> गुजरात-राजस्थान में एक अनुसूचित जाति है। पायथागोरियन में यह गुरु से राहु पर चला जाता है।</p></div><div class="nm pass"><div class="nm-h"><span class="nm-dev">ध्यान्न</span><span class="nm-rom">Dhyann</span><span class="nm-num">21 <span>·</span> 36 <span>·</span> दोनों गेट पास</span></div><p class="nm-scr">ध्यान — उपनिषदों और गीता का केंद्रीय शब्द। (यहाँ दूसरा <em>न</em> अंकों के लिए जोड़ा गया है, जो भारत में आम चलन है।)</p><p class="nm-mean"><strong>अर्थ:</strong> ध्यान, एकाग्रता, चिंतन।</p><p class="nm-cav">⚠ <strong>यह अभी खुला सवाल है</strong> — जाँच पूरी नहीं हो पाई, नीचे देखें।</p></div><div class="nm fail"><div class="nm-h"><span class="nm-dev">ध्रुव</span><span class="nm-rom">Dhruva</span><span class="nm-num">24 <span>·</span> 39 <span>·</span> अंकों में फेल</span></div><p class="nm-scr">सबसे गहरा शास्त्रीय आधार। <strong>ऋग्वेद 10.173</strong> — छह श्लोक और <em>हर एक</em> में <em>ध्रुव</em>; अनुक्रमणी के अनुसार सूक्त के ऋषि का नाम ही <strong>ध्रुव आंगिरस</strong> है। अथर्ववेद 6.87–88 · कठोपनिषद् 1.2.10 · छांदोग्य 7.26.2 · श्वेताश्वतर 2.15 · <strong>विष्णु सहस्रनाम #388</strong> · शिव सहस्रनाम #26/#624/#751 · गणेश सहस्रनाम #721 · भागवत 4.8–12 (विष्णु 4.9.4 में प्रकट होते हैं)।</p><p class="nm-mean"><strong>अर्थ:</strong> अटल, स्थिर, कभी न हिलने वाला — ध्रुव तारा।</p></div><div class="nm half"><div class="nm-h"><span class="nm-dev">ढुण्ढि</span><span class="nm-rom">Dhundhi</span><span class="nm-num">30 <span>·</span> 45 <span>·</span> सिर्फ़ पूरा-नाम गेट</span></div><p class="nm-scr"><strong>स्कंद पुराण, काशी खंड, अध्याय 57</strong> — काशी के प्रधान विनायक, जो विश्वनाथ मंदिर के द्वार पर खड़े हैं और जिन्होंने अपने 56 विनायक रूप बनाए। <strong>गणेश सहस्रनाम #501</strong>। 57.33 में नाम की व्याख्या ख़ुद पाठ देता है।</p><p class="nm-mean"><strong>अर्थ:</strong> जो खोज लेता है — भक्त को जो चाहिए वह ढूँढ़ निकालता है।</p><p class="nm-cav">⚠ दंतीय जुड़वाँ <strong>धुन्धु एक महा-असुर</strong> है (महाभारत 3.192.26), और रोमन में लिखने पर ढ/ध का फ़र्क़ मिट जाता है। होली में जलाई जाने वाली राक्षसी <em>ढुंढा</em> भी इसी अक्षर पर है।</p></div><div class="nm half"><div class="nm-h"><span class="nm-dev">भूपति</span><span class="nm-rom">Bhupati</span><span class="nm-num">27 <span>·</span> 42 <span>·</span> सिर्फ़ पहला गेट</span></div><p class="nm-scr"><strong>तैत्तिरीय संहिता · तैत्तिरीय ब्राह्मण · आश्वलायन श्रौतसूत्र</strong> — एकमात्र भ-नाम जिसका देवता-प्रमाण सीधे <em>यजुर्वेद</em> से आता है।</p><p class="nm-mean"><strong>अर्थ:</strong> पृथ्वी का स्वामी; कोशकार इसे रुद्र का नाम बताते हैं।</p><p class="nm-cav">⚠ तैत्तिरीय का वह वाक्य ख़ुद रुद्र का नाम नहीं लेता — रुद्र वाली पहचान कोशकारों की है।</p></div><div class="nm half"><div class="nm-h"><span class="nm-dev">धृतव्रत</span><span class="nm-rom">Dhritavrata</span><span class="nm-num">31 <span>·</span> 46 <span>·</span> सिर्फ़ पूरा-नाम गेट</span></div><p class="nm-scr"><strong>ऋग्वेद में 18 बार</strong>, वरुण का विशेषण (1.25.6/8/10, 2.1.4, 2.29.1); शतपथ ब्राह्मण; भागवत में रुद्र का नाम।</p><p class="nm-mean"><strong>अर्थ:</strong> जो अपने व्रत पर अटल रहे।</p><p class="nm-cav">चार अक्षर — रोज़ बोलने में लंबा।</p></div><div class="nm fail"><div class="nm-h"><span class="nm-dev">भव</span><span class="nm-rom">Bhava</span><span class="nm-num">15 <span>·</span> 30 <span>·</span> अंकों में फेल</span></div><p class="nm-scr"><strong>वाजसनेयि संहिता 16.28</strong>, शतरुद्रीय में — और महीधर की टीका ठीक यहीं लिखती है <em>इत उत्तरं रुद्रनामानि</em>, यानी <strong>भव शतरुद्रीय का पहला रुद्र-नाम है</strong>। अथर्ववेद 11.2.1 · शिव सहस्रनाम #12 और #697।</p><p class="nm-mean"><strong>अर्थ:</strong> जो है, अस्तित्व; शिव का नाम।</p><p class="nm-cav">⚠ हिंदी में <strong>भाव = क़ीमत/रेट</strong> — <em>क्या भाव है?</em> व्यापारी परिवार के लिए अटपटा।</p></div><div class="nm half"><div class="nm-h"><span class="nm-dev">धार्मिक</span><span class="nm-rom">Dharmik</span><span class="nm-num">19 <span>·</span> 34 <span>·</span> सिर्फ़ पहला गेट</span></div><p class="nm-scr"><strong>गणेश सहस्रनाम #187</strong> (गणेश पुराण उपासना खंड 46.28) — <em>यशस्वी धार्मिको जेता</em>। दो अलग संस्करणों से मिलान किया गया।</p><p class="nm-mean"><strong>अर्थ:</strong> धर्म पर चलने वाला।</p><p class="nm-cav">⚠ धर्मेश · धर्मेंद्र · धर्मराज — ये तीनों <strong>यम</strong> के नाम हैं। धार्मिक अलग बना है और साफ़ है।</p></div><div class="nm fail"><div class="nm-h"><span class="nm-dev">भगीरथ</span><span class="nm-rom">Bhagirath</span><span class="nm-num">24 <span>·</span> 39 <span>·</span> अंकों में फेल</span></div><p class="nm-scr"><strong>वाल्मीकि रामायण, बाल कांड 41–43</strong> — गंगा को धरती पर लाने वाले राजा; वंशावली 1.69.26 (इक्ष्वाकु/सूर्यवंश, राम के पूर्वज)। हिंदी का <em>भगीरथ प्रयत्न</em> मुहावरा पूरी तरह सकारात्मक है।</p><p class="nm-mean"><strong>अर्थ:</strong> गंगा को धरती पर उतारने वाला।</p><p class="nm-cav">⚠ <strong>भागीरथी</strong> = गंगा, एक स्वर की दूरी पर लड़की का आम नाम।</p></div><div class="nm fail"><div class="nm-h"><span class="nm-dev">धनञ्जय</span><span class="nm-rom">Dhananjaya</span><span class="nm-num">25 <span>·</span> 40 <span>·</span> अंकों में फेल</span></div><p class="nm-scr"><strong>विष्णु सहस्रनाम #660</strong>; गीता में कृष्ण अर्जुन को <strong>14 बार</strong> इसी नाम से पुकारते हैं, विभूति-योग (10.37) सहित।</p><p class="nm-mean"><strong>अर्थ:</strong> धन को जीतने वाला — अर्जुन का नाम।</p><p class="nm-cav">⚠ यह एक ब्राह्मण गोत्र/प्रवर का नाम भी है, और “एक नाग-दैत्य” भी।</p></div></div><div class="callout"><h3>नतीजा: शास्त्र और अंक दोनों पर सिर्फ़ तीन नाम खरे उतरते हैं</h3><p><strong>भार्गव · धीर · ध्यान्न</strong> — यही तीन दोनों गेट पास करते हैं। और ध्यान देने लायक़ बात यह है कि <strong>शास्त्र की खोज ने कोई नया नाम नहीं जोड़ा</strong> — ये वही तीन हैं जो पहले भाषा-जाँच से बचे थे। दोनों रास्ते एक ही जगह पहुँचे, यह अपने आप में मज़बूत संकेत है।</p><p><strong>सबसे बड़ा दुख यहाँ ध्रुव का है।</strong> शास्त्र के हिसाब से ध्रुव इस पूरी सूची में सबसे गहरा नाम है — ऋग्वेद के एक पूरे सूक्त में, तीन-तीन सहस्रनामों में, और भागवत की सबसे प्यारी बाल-कथा में। लेकिन अंकों में यह <strong>दोनों गेट पर फेल</strong> है (24 → शुक्र, और गोयल के साथ 39)। यह वही नतीजा है जो पहले भी निकला था: <strong>कोई भी ध्रुव-वाला नाम दोनों गेट पास नहीं कर सकता</strong>।</p></div><h3 style="font-family:var(--display);font-size:24px;margin:44px 0 14px">जो नाम रद्द किए गए, और क्यों</h3><div class="tscroll"><table><thead><tr><th>नाम</th><th>क्यों नहीं</th></tr></thead><tbody><tr><td class="g">धर्मेश · धर्मेंद्र · धर्मराज</td><td>तीनों <strong>यम</strong> (मृत्यु के देवता) के शास्त्रीय नाम हैं — पाँच कोशों में एकमत।</td></tr><tr><td class="g">भूरि</td><td>भारत में <strong>3,33,351 लोग, 100% लड़कियाँ</strong> — यह आम लड़की का नाम है।</td></tr><tr><td class="g">धात्री</td><td>100% लड़कियाँ। रोमन में पुल्लिंग धातृ और स्त्रीलिंग धात्री दोनों “Dhatri” बनते हैं।</td></tr><tr><td class="g">धन्य</td><td>लड़की का नाम, और कोश में एक अर्थ <strong>“नास्तिक”</strong> भी है।</td></tr><tr><td class="g">भद्र</td><td>मनुस्मृति 9.259 में <strong>“पाखंडी, ढोंगी”</strong>; और सबसे प्रसिद्ध भद्रा कृष्ण की रानी हैं।</td></tr><tr><td class="g">धुर्य</td><td>वाजसनेयि #329 होने के बावजूद कोश में <strong>“बोझ ढोने वाला जानवर”</strong>।</td></tr><tr><td class="g">धिषण</td><td>अथर्ववेद 2.14.1 में <strong>“एक दुष्ट प्राणी”</strong> का नाम।</td></tr><tr><td class="g">भग</td><td><strong>“योनि”</strong> — यह अर्थ मनु और महाभारत दोनों में प्रमाणित है।</td></tr><tr><td class="g">भूदेव · भूसुर</td><td>इनका शाब्दिक अर्थ ही <strong>“ब्राह्मण”</strong> है — गोयल परिवार के लिए बेमेल।</td></tr><tr><td class="g">ध्रुवेश · ध्रुवांश · भवित · धन्विक · धर्मित</td><td><strong>ये शब्द किसी संस्कृत कोश में हैं ही नहीं</strong> — पूरे मोनियर-विलियम्स (2,86,526 प्रविष्टियाँ) और आप्टे में एक भी नहीं मिला। ये आधुनिक गढ़े हुए नाम हैं।</td></tr></tbody></table></div><div class="warn" style="margin-top:30px"><p><strong>एक जाँच अधूरी रह गई, और मैं उसे छिपा नहीं रहा:</strong> <em>ध्यान्न</em> की असली दुनिया में कितनी चलन है — यह जाँच पूरी नहीं हो पाई (शोध का कोटा ख़त्म हो गया)। एक शुरुआती रिपोर्ट कहती है कि इस वर्तनी का कोई रिकॉर्ड नहीं मिलता, जबकि सादा <em>ध्यान</em> ख़ूब चलता है। पर वह रिपोर्ट ख़ुद अधूरे डेटा पर थी, और भारत में अंकों के लिए अक्षर जोड़ना आम बात है — इसलिए <strong>मैं इसे अभी सही नहीं मान रहा और इस आधार पर सुझाव नहीं बदल रहा।</strong> जाँच पूरी होते ही बताऊँगा।</p></div>
+</section>
+
+<footer>
+  <span>स्विस एफ़ेमेरिस · लाहिड़ी अयनांश · उत्तर भारतीय शैली · बठिंडा 30.211°N 74.946°E</span>
+  <span>निजी पृष्ठ · सर्च इंजन में नहीं</span>
+</footer>
+</div>
+</body>
+</html>
